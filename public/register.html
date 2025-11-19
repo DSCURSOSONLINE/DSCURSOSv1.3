@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar | DS CURSOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/traducao.js"></script>
+
+</head>
+<body>
+<header class="topbar"><div class="container"><div class="nav">
+  <div class="logo">DS<span>CURSOS</span></div>
+  <nav class="nav"><a href="/">HOME</a>
+</div></div></header>
+<main class="container">
+  <section class="form-card" style="max-width:420px;margin:2rem auto;">
+    <h1>Criar conta</h1>
+    <form id="registerForm" onsubmit="reg(event)">
+      <label>Nome<input type="text" name="nome" required></label>
+      <label>E-mail<input type="email" name="email" required></label>
+      <label>Senha<input type="password" name="senha" required></label>
+      <button class="btn" type="submit">Cadastrar</button>
+    </form>
+    <p class="muted mt-2">Já tem conta? <a href="/login.html">Entrar</a></p>
+  </section>
+</main>
+<footer class="footer"><p>© 2025 DS CURSOS — Plataforma de Tecnologia</p></footer>
+<script>
+async function reg(e){
+  e.preventDefault();
+  const fd=new FormData(e.target);
+  const body={nome:fd.get('nome'), email:fd.get('email'), senha:fd.get('senha')};
+  const resp=await fetch('/api/auth/register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+  const j=await resp.json();
+  if(resp.ok){ alert('Cadastro feito! Agora faça login.'); location.href='/login.html'; } else { alert(j.error||'Erro ao cadastrar'); }
+}
+</script>
+
+</body>
+</html>
+

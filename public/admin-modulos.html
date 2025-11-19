@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Módulos e Aulas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/admin-modulos.js"></script>
+  <script src="js/traducao.js"></script>
+
+</head>
+<body>
+<header class="topbar"><div class="container"><div class="nav">
+  <div class="logo">DS<span>CURSOS</span></div>
+</div></div></header>
+<main class="container">
+  <section class="form-card">
+    <h1>Gerenciar Módulos e Aulas</h1>
+    <label>Curso:
+      <select id="selectCurso"></select>
+    </label>
+  </section>
+
+  <section class="form-card">
+    <h2>Novo módulo</h2>
+    <form id="formModulo">
+      <input type="hidden" name="id">
+      <label>Título<input type="text" name="titulo" required></label>
+      <button class="btn" type="submit">Salvar módulo</button>
+      <button class="btn-outline" type="button" id="novoModulo">Novo</button>
+    </form>
+  </section>
+
+  <section class="table-wrapper">
+    <h2>Módulos do curso</h2>
+    <div id="listaModulos"></div>
+  </section>
+</main>
+<footer class="footer"><p>© 2025 DS CURSOS — Plataforma de Tecnologia</p></footer>
+
+</body>
+</html>

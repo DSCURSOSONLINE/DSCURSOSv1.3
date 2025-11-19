@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscar | Cursos TI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/search.js"></script>
+  <script src="js/traducao.js"></script>
+
+</head>
+<body>
+<header class="topbar"><div class="container"><div class="nav">
+  <div class="logo">Cursos<span>TI</span></div>
+  <nav class="nav">
+    <a href="/">Início</a><a href="/aulas.html">Cursos</a><a href="/search.html">Buscar</a>
+  </nav>
+</div></div></header>
+<main class="container">
+  <section class="form-card"><h1>Busca global</h1>
+    <form id="formBusca">
+      <input type="text" name="q" placeholder="Digite um termo..." required>
+      <button class="btn" type="submit">Buscar</button>
+    </form>
+  </section>
+  <section>
+    <h2>Cursos</h2><div id="resCursos" class="grid-3"></div>
+    <h2>Módulos</h2><div id="resModulos" class="grid-3"></div>
+    <h2>Aulas</h2><div id="resAulas" class="grid-3"></div>
+  </section>
+</main>
+<footer class="footer"><p>© 2025 DS CURSOS — Plataforma de Tecnologia</p></footer>
+
+</body>
+</html>
+

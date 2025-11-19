@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - DS CURSOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="js/admin-dashboard.js"></script>
+  <script src="js/traducao.js"></script>
+
+</head>
+<body>
+<header class="topbar"><div class="container"><div class="nav">
+  <div class="logo">DS<span>CURSOS</span></div>
+</header>
+<main class="container">
+  <h1>Dashboard Administrativo</h1>
+  <section class="dashboard-cards mt-3">
+    <div class="card"><h3>Usuários</h3><h2 id="totalUsuarios">0</h2></div>
+    <div class="card"><h3>Cursos</h3><h2 id="totalCursos">0</h2></div>
+    <div class="card"><h3>Matrículas</h3><h2 id="totalMatriculas">0</h2></div>
+    <div class="card"><h3>Aulas</h3><h2 id="totalAulas">0</h2></div>
+  </section>
+  <section class="mt-4"><h2>Métricas</h2><canvas id="chartMatriculas" height="120"></canvas></section>
+</main>
+<footer class="footer"><p>© 2025 DS CURSOS — Plataforma de Tecnologia</p></footer>
+
+</body>
+</html>
+

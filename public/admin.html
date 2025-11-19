@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Painel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+  <script defer src="js/darkmode.js"></script>
+  <script defer src="js/admin.js"></script>
+  <script src="js/traducao.js"></script>
+
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar">
+    <div class="admin-logo">DS<span>CURSOS</span></div>
+
+<nav class="admin-nav">
+
+  <a href="#" onclick="abrirOverlay('admin-dashboard.html')">
+    📊 <span>Dashboard</span>
+  </a>
+
+  <a href="#" onclick="abrirOverlay('admin-modulos.html')">
+    📚 <span>Adicionar Aulas</span>
+  </a>
+
+  <a href="#" onclick="abrirOverlay('admin-notificacoes.html')">
+    🔔 <span>Notificações</span>
+  </a>
+
+  <a href="#" onclick="abrirOverlay('admin-usuarios.html')">
+    🧑‍🎓 <span>Painel de Usuários</span>
+  </a>
+
+  <a href="#" onclick="abrirOverlay('admin-configuracoes.html')">
+    ⚙️ <span>Configurações</span>
+  </a>
+
+   <a href="aulas.html" class="active">🧑 <span>Aulas</span></a>
+
+</nav>
+
+    <div class="admin-bottom">
+      <button id="logoutBtn" class="btn-outline admin-logout">Sair</button>
+    </div>   
+  </aside>
+
+
+<!-- ========================== OVERLAY FULLSCREEN ========================== -->
+<div id="overlay" class="overlay hidden">
+  <div class="overlay-content">
+    <button class="overlay-close" onclick="fecharOverlay()">✖</button>
+    <iframe id="overlayFrame"></iframe>
+  </div>
+</div>
+
+</body>
+</html>
+

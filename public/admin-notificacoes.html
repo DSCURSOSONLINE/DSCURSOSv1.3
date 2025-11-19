@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Notificações</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/admin-notificacoes.js"></script>
+  <script src="js/traducao.js"></script>
+
+</head>
+<body>
+<header class="topbar"><div class="container"><div class="nav">
+  <div class="logo">DS<span>CURSOS</span></div>
+</header>
+<main class="container">
+  <section class="form-card">
+    <h1>Enviar Notificação</h1>
+    <div id="msgNotify" class="alert" style="display:none;"></div>
+    <form id="formNotif">
+      <label>Enviar para:
+        <select name="user_id">
+          <option value="">Todos os usuários (global)</option>
+        </select>
+      </label>
+      <label>Título<input type="text" name="titulo" required></label>
+      <label>Mensagem<textarea name="mensagem" required></textarea></label>
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section class="table-wrapper" style="margin-top:2rem;">
+    <h2>Notificações enviadas</h2>
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Título</th><th>Mensagem</th><th>Data</th><th>Ação</th></tr>
+      </thead>
+      <tbody id="listaNotifs"></tbody>
+    </table>
+  </section>
+</main>
+<footer class="footer"><p>© 2025 DS CURSOS — Plataforma de Tecnologia</p></footer>
+
+</body>
+</html>
+

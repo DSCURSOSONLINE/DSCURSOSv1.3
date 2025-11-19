@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Área | Cursos TI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="js/user.js"></script>
+  <script src="js/traducao.js"></script>
+
+</head>
+<body>
+<header class="topbar">
+  <div class="container">
+    <div class="nav">
+      <div class="logo">DS<span>CURSOS</span></div>
+      <nav class="nav">
+        <a href="/aulas.html">Aulas</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<main class="container user-area">
+  <section class="user-card">
+    <div class="user-photo">
+      <img id="fotoPerfil" src="/img/user-default.png" alt="foto">
+      <input type="file" id="fotoInput" accept="image/*">
+      <button class="btn-small" id="btnFoto">Enviar Foto</button>
+    </div>
+    <div class="user-info">
+      <h2 id="userNome"></h2>
+      <p id="userEmail" class="muted"></p>
+      <label>Telefone:<input type="text" id="userTelefone"></label>
+      <label>Interesses:<input type="text" id="userInteresses" placeholder="Ex: Python, Redes, Front-end"></label>
+      <button class="btn" id="btnSalvarExtra">Salvar informações</button>
+    </div>
+  </section>
+
+  <section><h2>Cursos matriculados</h2><div id="listaCursos" class="grid-3"></div></section>
+  <section><h2>Continuar assistindo</h2><div id="continuarBox" class="grid-3"></div></section>
+
+  <section class="form-card">
+    <h2>Estatísticas</h2>
+    <p><strong>Aulas concluídas:</strong> <span id="statAulas">0</span></p>
+    <p><strong>Tempo total estudado:</strong> <span id="statTempo">0h 0m</span></p>
+    <canvas id="chartTempo" height="80"></canvas>
+    <h3 class="mt-2">Últimas aulas</h3>
+    <ul id="listaUltimas"></ul>
+  </section>
+</main>
+<footer class="footer"><p>© 2025 DS CURSOS — Plataforma de Tecnologia</p></footer>
+
+</body>
+</html>
+

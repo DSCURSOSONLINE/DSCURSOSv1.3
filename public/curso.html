@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Curso | DS CURSOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/curso.js"></script>
+  <script defer src="js/darkmode.js"></script>
+  <script src="js/traducao.js"></script>
+
+</head>
+<body>
+<header class="topbar">
+  <div class="container">
+    <div class="nav">
+      <div class="logo">DS<span>CURSOS</span></div>
+      <nav class="nav">
+        <a href="aulas.html">Aulas</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<main class="container">
+  <section class="curso-header">
+    <div class="curso-info">
+      <h1 id="cursoTitulo">Carregando...</h1>
+      <p class="muted" id="cursoCategoria"></p>
+      <p id="cursoDescricao" class="curso-descricao"></p>
+      <div class="curso-actions">
+        <button id="btnMatricular" class="btn-primary">Matricular</button>
+        <button id="btnContinuar" class="btn" style="display:none;">Continuar aula</button>
+      </div>
+      <div class="curso-progress">
+        <label>Progresso:</label>
+        <div class="progressbar"><div id="progressFill"></div></div>
+        <span id="progressText">0%</span>
+      </div>
+    </div>
+    <img id="cursoThumb" class="curso-thumb" alt="Imagem do curso">
+  </section>
+  <section class="curso-modulos">
+    <h2>Conteúdo do curso</h2>
+    <div id="listaModulos"></div>
+  </section>
+</main>
+<footer class="footer"><p>© 2025 DS CURSOS — Plataforma de Tecnologia</p></footer>
+
+</body>
+</html>
+

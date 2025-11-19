@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Configurações</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+  <script defer src="js/darkmode.js"></script>
+  <script defer src="js/admin-configuracoes.js"></script>
+  <script defer src="js/admin.js"></script>
+  <script src="js/traducao.js"></script>
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <aside class="admin-sidebar">
+    <div class="admin-logo">DS<span>CURSOS</span></div>
+  </aside>
+
+  <main class="admin-content fade-in">
+    <h1>⚙️ Configurações Gerais</h1>
+    <p class="muted">Ajustes da plataforma, modos, limpeza e manutenção.</p>
+
+    <section class="form-card mt-3">
+      <h2>Tema</h2>
+      <button class="btn" onclick="alternarTema()">Alternar Dark/Light</button>
+    </section>
+
+    <section class="form-card mt-3">
+      <h2>Manutenção</h2>
+      <button class="btn-danger" onclick="limparCache()">Limpar Cache</button>
+      <button class="btn-danger" onclick="limparSeeds()">Resetar Banco (Seed)</button>
+    </section>
+
+  </main>
+</div>
+<button id="traduzirBtnFloat" class="btn-flutuante-trad" aria-label="Traduzir site">
+  🌐
+</button>
+
+<script src="js/traducao.js"></script>
+</body>
+</html>
+

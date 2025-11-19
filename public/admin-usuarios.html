@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Usuários</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+  <script defer src="js/darkmode.js"></script>
+  <script defer src="js/admin-usuarios.js"></script>
+  <script defer src="js/admin.js"></script>
+  <script src="js/traducao.js"></script>
+
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <aside class="admin-sidebar">
+    <div class="admin-logo">DS<span>CURSOS</span></div>
+  </aside>
+
+  <main class="admin-content fade-in">
+    <h1>🧑‍🎓 Gerenciar Usuários</h1>
+    <p class="muted">Veja todos os usuários cadastrados e gerencie permissões.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Admin?</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="listaUsuarios"></tbody>
+      </table>
+    </div>
+  </main>
+
+</div>
+
+</body>
+</html>
+
+

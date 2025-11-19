@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Aula | DS CURSOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/darkmode.js"></script>
+  <script defer src="js/aula.js"></script>
+  <script src="js/traducao.js"></script>
+
+</head>
+<body>
+<header class="topbar">
+  <div class="container">
+    <div class="nav">
+      <div class="logo">DS<span>CURSOS</span></div>
+      <nav class="nav">
+        <a href="aulas.html">Aulas</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<main class="container">
+  <section style="margin-top:1.5rem;">
+    <h1 id="aulaTitulo">Carregando aula...</h1>
+    <p class="muted" style="margin-top:.3rem;">Conteúdo exclusivo para alunos logados.</p>
+  </section>
+  <section class="aula-layout" style="margin-top:1.5rem;">
+    <div class="aula-player-wrapper">
+      <div class="video-wrapper">
+        <iframe id="aulaVideo" src="" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <p id="aulaDescricao" class="aula-descricao"></p>
+      <div class="form-card mt-3">
+        <h2>Comentários</h2>
+        <p class="muted" style="font-size:.9rem;margin-bottom:.6rem;">Os comentários são visíveis apenas para alunos logados.</p>
+        <div id="comentariosBox"><p class="muted">Carregando comentários...</p></div>
+      </div>
+    </div>
+    <aside class="aula-sidebar">
+      <h3>Conteúdo do curso</h3>
+      <p class="muted" style="font-size:.9rem;margin-bottom:.5rem;">Navegue entre as aulas deste módulo:</p>
+      <ul id="listaAulas" class="lista-aulas"><li class="muted">Carregando aulas...</li></ul>
+    </aside>
+  </section>
+</main>
+<footer class="footer"><p>© 2025 DS CURSOS — Plataforma de Tecnologia</p></footer>
+
+</body>
+</html>
+
