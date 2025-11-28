@@ -2,41 +2,52 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Cadastrar | DS CURSOS</title>
+  <title>Criar Conta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/traducao.js"></script>
 
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/darkmode.js"></script>
+  <script defer src="js/register.js"></script>
 </head>
+
 <body>
-<header class="topbar"><div class="container"><div class="nav">
-  <div class="logo">DS<span>CURSOS</span></div>
-  <nav class="nav"><a href="/">HOME</a>
-</div></div></header>
-<main class="container">
-  <section class="form-card" style="max-width:420px;margin:2rem auto;">
+
+<header class="topbar">
+  <div class="container nav">
+    <div class="logo">DS<span>CURSOS</span></div>
+    <a href="/home.html">HOME</a>
+  </div>
+</header>
+
+<main class="container fade-in" style="max-width: 450px; margin-top: 2rem;">
+  
+  <div class="card">
     <h1>Criar conta</h1>
-    <form id="registerForm" onsubmit="reg(event)">
-      <label>Nome<input type="text" name="nome" required></label>
-      <label>E-mail<input type="email" name="email" required></label>
-      <label>Senha<input type="password" name="senha" required></label>
-      <button class="btn" type="submit">Cadastrar</button>
+    <p class="muted">Preencha os dados abaixo</p>
+
+    <form id="registerForm" class="form mt-2">
+      <label>Nome</label>
+      <input type="text" id="nome" required>
+
+      <label>Email</label>
+      <input type="email" id="email" required>
+
+      <label>Senha</label>
+      <input type="password" id="senha" required>
+
+      <label>Confirmar senha</label>
+      <input type="password" id="confirmarSenha" required>
+
+      <button class="btn mt-2" type="submit">Criar conta</button>
+
+      <p style="text-align:center;margin-top:1rem;">
+        Já possui conta? <a href="/login.html">Entrar</a>
+      </p>
     </form>
-    <p class="muted mt-2">Já tem conta? <a href="/login.html">Entrar</a></p>
-  </section>
+  </div>
+
 </main>
-<footer class="footer"><p>© 2025 DS CURSOS — Plataforma de Tecnologia</p></footer>
-<script>
-async function reg(e){
-  e.preventDefault();
-  const fd=new FormData(e.target);
-  const body={nome:fd.get('nome'), email:fd.get('email'), senha:fd.get('senha')};
-  const resp=await fetch('/api/auth/register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
-  const j=await resp.json();
-  if(resp.ok){ alert('Cadastro feito! Agora faça login.'); location.href='/login.html'; } else { alert(j.error||'Erro ao cadastrar'); }
-}
-</script>
 
 </body>
 </html>
-
+  

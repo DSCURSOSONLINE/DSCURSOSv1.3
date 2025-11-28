@@ -17,4 +17,7 @@ router.get("/metrics", isAdmin, async (req, res) => {
   });
 });
 
+// ROTA DE EXCLUIR
+// DELETE USERS
+
 module.exports = router;

@@ -30,7 +30,7 @@ async function tornarAdmin(id) {
 
   await fetch("/api/admin/users/admin/" + id, {
     method: "PUT",
-    credentials: "include"
+    // credentials: "include"
   });
 
   carregarUsuarios();
@@ -41,7 +41,7 @@ async function deletarUsuario(id) {
 
   await fetch("/api/admin/users/" + id, {
     method: "DELETE",
-    credentials: "include"
+    // credentials: "include"
   });
 
   carregarUsuarios();
