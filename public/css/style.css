@@ -63,6 +63,7 @@ body.dark {
   margin: 0 auto;
 }
 
+
 .muted {
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -724,3 +725,5 @@ tr:last-child td {
   box-shadow: var(--shadow-soft);
   animation: fadeIn 0.8s ease;
 }
+
+
