@@ -100,7 +100,6 @@
   box-shadow: 0 20px 40px rgba(0,0,0,0.18);
 }
 
-/* Mobile */
 @media (max-width: 900px) {
   .admin-layout {
     grid-template-columns: 1fr;
@@ -121,7 +120,7 @@
   }
 }
 
-/* Toggle (mobile e desktop) */
+/* Toggle (desktop) */
 
 .sidebar-toggle {
   background: transparent;
